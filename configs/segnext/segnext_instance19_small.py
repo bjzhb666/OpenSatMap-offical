@@ -62,7 +62,7 @@ model = dict(
         norm_cfg=ham_norm_cfg,
         align_corners=False,
         loss_decode=[
-            dict(type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0, class_weight=[1, 30, 25, 30, 30, 30, 30, 30]),
+            dict(type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0, class_weight=[1, 10, 10, 10, 10, 10, 10, 10]),
             dict(type='DiceLoss', loss_name='loss_dice', loss_weight=1.0, ignore_index=255)],
         # loss_instance_decode=dict(
         #     type='AELoss', loss_weight=1, push_loss_factor=1, minimum_instance_pixels=1),
