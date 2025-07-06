@@ -38,7 +38,7 @@ test_pipeline = [
 train_dataloader = dict(  # 训练数据加载器(dataloader)的配置
     batch_size=2,  # 每一个GPU的batch size大小
     num_workers=1,  # 为每一个GPU预读取数据的进程个数
-    persistent_workers=True,  # 在一个epoch结束后关闭worker进程，可以加快训练速度
+    persistent_workers=False,  # 在一个epoch结束后关闭worker进程，可以加快训练速度
     sampler=dict(type='InfiniteSampler', shuffle=True),  # 训练时进行随机洗牌(shuffle)
     dataset=dict(  # 训练数据集配置
         type=dataset_type,  # 数据集类型，详见mmseg/datassets/
