@@ -125,4 +125,11 @@ test_merge_dict.py
 test_same_images.py
 test_color_map.py
 debug_line_type*
-prepare_data/
+prepare_data/8.13
+prepare_data/19picsuse
+prepare_data/19picsusetrainvaltest
+prepare_data/allpic
+prepare_data/picuse19save
+prepare_data/picuse20save
+prepare_data/picuse20trainvaltest
+prepare_data/tools_ori
