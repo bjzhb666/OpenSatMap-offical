@@ -51,7 +51,7 @@ model = dict(
         channels=256,
         ham_channels=256,
         dropout_ratio=0.1,
-        num_classes=9, # 分割前景的种类数目。 通常情况下，cityscapes 为19，VOC为21，ADE20k 为150
+        num_classes=8, # 分割前景的种类数目。 通常情况下，cityscapes 为19，VOC为21，ADE20k 为150
         num_color_classes=5,
         num_line_types=11,
         num_linenums = 5,
@@ -61,7 +61,7 @@ model = dict(
         norm_cfg=ham_norm_cfg,
         align_corners=False,
         loss_decode=[dict(
-            type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0, class_weight=[1, 30, 25, 30, 30, 30, 25, 30, 30], avg_non_ignore=True),
+            type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0, class_weight=[1, 10, 10, 10, 5, 5, 5, 5], avg_non_ignore=True),
             dict(type='DiceLoss', loss_name='loss_dice', loss_weight=0.333, ignore_index=255),
             dict(type='TverskyLoss', loss_weight=1.0, ignore_index=255)],
         loss_direction_decode=[
